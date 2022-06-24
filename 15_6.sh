@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#setting up functions for calling
+
 add(){
     answer=$(($1 + $2))
 }
@@ -27,7 +29,7 @@ elif [[ $op == s ]] ; then sub $arg1 $arg2
 elif [[ $op == d ]] ; then div $arg1 $arg2
 elif [[ $op == m ]] ; then mult $arg1 $arg2
 else
-    echo  " $op is not a, s, m, or d, aborting and launching nuke at your home " ; exit 2
+    echo  " $op is not a, s, m, or d, aborting. Try again. " ; exit 2
 fi
 
 #Display answers
