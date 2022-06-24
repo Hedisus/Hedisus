@@ -1,0 +1,53 @@
+#! /bin/bash
+
+#Check 2 arguments were given
+[[ $# -lt 2 ]] && \
+    echo "Asshole, give 2 strings as arguments to the command....." && exit 1
+
+str1=$1
+str2=$2
+
+## test command
+
+echo "Is string 1 zero length? Value of 1 means FALSE, egghead"
+[ -z "$str1" ]
+echo $?
+
+# $? means the result of the check
+#-z = zero? check if the argument given is zero?
+# also using [[ -z $str1 ]] also works, despite the missing quotes
+
+echo "Is string 2 not zero length? Value of 0 Means TRUE, for those who don't know."
+[[ -n $str2 ]]
+echo $?
+
+# Comparing dick siz- I mean "string lengths"
+
+len1=${#str1}
+len2=${#str2}
+echo "length of string 1 = $len1, length of string 2 = $len2 "
+
+if [ $len1 -gt $len2 ]
+then
+    echo "String 1 is the longer penis! I mean string!"
+else
+    if [ $len2 -gt $len1 ]
+    then
+	echo "String 2 is miles bigger then dick 1, err string 1"
+    else
+	echo "They are the same length, stop nitpicking nanometers....."
+    fi
+fi
+
+#comparing the two strings to see if they match
+
+if [[ $str1 == $str2 ]]
+then
+    echo "$str1 is the same as $str2"
+else
+    if [[ $str1 != $str2 ]]
+    then
+	echo "One is definately not the other, that's what she and I say"
+    fi
+fi
+

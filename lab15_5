@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Functions defining so we don't pull a random one and do horrifying damage to the files
+func1() {
+echo " Here's the first function, yo! "
+}
+func2() {
+echo " I'm function 2, heya! "
+}
+func3() {
+echo " I'm function 3, not that you care...... "
+}
+
+
+#actual commands to run!
+
+echo "Heya, I'll introduce you to some functions of mine! Pick a number between 1 and 3! "
+
+read n
+
+# Calling the function
+
+func$n
+
+exit

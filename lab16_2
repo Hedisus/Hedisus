@@ -1,0 +1,25 @@
+#! /bin/bash
+
+#Get input in numerical format
+
+echo "enter a number you want me to translate to a month (between 1-12)"
+read ans
+
+case $ans in
+1) echo "You entered January";;
+2) echo "You entered February";;
+3) echo "You entered March";;
+4) echo "You entered April";;
+5) echo "You entered May";;
+6) echo "You entered June";;
+7) echo "You entered July";;
+8) echo "You entered August";;
+9) echo "You entered September";;
+10) echo "You entered October, how spooky!";;
+11) echo "You entered The best month, November!";;
+12) echo "You entered December";;
+*) echo "You entered an invalid thing, try 1-12 next time"
+
+esac
+
+exit 0
